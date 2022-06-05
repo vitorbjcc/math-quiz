@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Matemática quiz</title>
+	<link rel="shortcut icon" href="./math-book.png">
+
+	<style type="text/css">
+		* {
+			border: 0;
+			padding: 0;
+			background-color: #0d1117;
+			color: #fff;
+		}
+
+		#btn {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			font-size: 35pt;
+			border: 0;
+			padding: 10px;
+			border-radius: 10px ;
+			cursor: pointer;
+			color: #fff;
+			position: relative;
+			background-color: #3fb950;
+			
+		}
+
+		footer {
+			font-size: 15pt;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<footer>&copy;Cuphead services</footer>
+	<button id="btn" onclick="matematica()">Começar</button>
+
+	<script type="text/javascript">
+
+		const respostas = [
+			{pergunta: '1/4 x 1/4', resposta: '1/16'},
+			{pergunta: '10 x 10', resposta: '100'},
+			{pergunta: '5 x 20', resposta: '100'}
+		]
+
+		function matematica() {
+
+			for (let i = 0; i < respostas.length; i++) {
+
+				const quiz = window.prompt(`Quanto é ${respostas[i].pergunta} ?`)
+
+				if (quiz !== respostas[i].resposta) {
+					window.alert('Resposta incorreta!')
+				} else {
+					window.alert('Resposta correta!')
+				}
+
+
+			}
+
+		}
+	</script>
+</body>
+</html>
